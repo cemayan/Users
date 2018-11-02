@@ -2,6 +2,13 @@
 ## Yükleme Adımları
 ---
 
+Repoyu bilgisayarımıza aşağıdaki şekilde indiriyoruz
+
+```
+git clone https://github.com/cemayan/Users.git
+cd Users
+```
+
 - Api projesinde gerekli paketlerini aşağıdaki gibi yükleyebiliriz.
 
 ```
