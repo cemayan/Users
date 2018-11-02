@@ -73,7 +73,7 @@
 
         if(data.auth){
           self.user = Object.assign({}, self.empty)
-          console.log("successed")
+          document.location.href = '/signin'
         }
        })
       }

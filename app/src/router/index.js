@@ -26,7 +26,7 @@ import Router from 'vue-router'
 const routerOptions = [
 
 
-
+  //Eğer login ise home sayfasına yönlenmesi için
   { path: '/', component: 'Login',  beforeEnter: (to, from, next) => {
     if(localStorage.getItem("token")){
       fetch('http://localhost:3000/api/auth/me',{

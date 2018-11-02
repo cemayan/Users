@@ -75,7 +75,7 @@
   data() {
     return {
       dialog: false,
-      editStatus: 0,
+      editStatus: 0,//Kayıt ve düzenleme işlemi farkı için
       currentUser: {
         _id : '',
         username : '',
@@ -99,6 +99,7 @@
   },
   created() {
   
+      //Giriş yapılmuş ise içeriğin gösterilmesi için localStorage el ile değiştirebilir diye bunu server side kontrol ediyoruz.
       var self = this
         fetch('http://localhost:3000/api/auth/me',{
           method:'GET',

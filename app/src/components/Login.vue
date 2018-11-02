@@ -70,7 +70,7 @@
        }).then(res=>res.json()).then(function(data){
 
           if(data.auth){
-            localStorage.setItem("token",data.token)
+            localStorage.setItem("token",data.token)//Giriş yapılıp yapılmadığını anlamak için
              window.location.href = "/home"
           }
           else{
