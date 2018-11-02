@@ -1,0 +1,16 @@
+{
+  "name": "project",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "connect": "^3.6.6",
+    "express": "^4.16.4",
+    "body-parser": "^1.18.3",
+    "mongoose": "^5.3.8",
+    "jsonwebtoken": "^8.3.0",
+    "bcryptjs": "^2.4.3"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}
