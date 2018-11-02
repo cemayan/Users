@@ -120,7 +120,13 @@
   methods : {
     init(){
       var self = this
-      fetch('http://localhost:3000/users').then(x=>x.json()).then(function(response){
+      fetch('http://localhost:3000/users',{
+        method: 'GET',
+        headers :{
+          'Content-Type' : 'application/x-www-form-urlencoded',
+          'x-access-token' : localStorage.getItem("token")
+        }
+      }).then(x=>x.json()).then(function(response){
         self.users = response
       })
     },
@@ -133,7 +139,8 @@
               method:'PUT',
               headers: {
                 'Accept': 'application/json',
-                'Content-Type' : 'application/json'
+                'Content-Type' : 'application/json',
+                'x-access-token' : localStorage.getItem("token")
               },
               body: JSON.stringify(self.currentUser)
         }).then(res=>res.json()).then(function(){
@@ -149,7 +156,8 @@
               method:'POST',
               headers: {
                 'Accept': 'application/json',
-                'Content-Type' : 'application/json'
+                'Content-Type' : 'application/json',
+                'x-access-token' : localStorage.getItem("token")
               },
               body: JSON.stringify(self.currentUser)
         }).then(res=>res.json()).then(function(){
@@ -176,7 +184,8 @@
           method:'PUT',
           headers: {
             'Accept': 'application/json',
-            'Content-Type' : 'application/json'
+            'Content-Type' : 'application/json',
+            'x-access-token' : localStorage.getItem("token")
           },
           body: JSON.stringify(user)
        }).then(res=>res.json());
@@ -187,7 +196,8 @@
               method:'DELETE',
               headers: {
                 'Accept': 'application/json',
-                'Content-Type' : 'application/json'
+                'Content-Type' : 'application/json',
+                'x-access-token' : localStorage.getItem("token")
               }
         }).then(res=>res.json()).then(function(){
           self.init()
