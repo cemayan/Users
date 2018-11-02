@@ -22,6 +22,7 @@
                     Please try again.
                  </v-alert>
                 <v-spacer></v-spacer>
+                <v-btn color="primary" @click="register">Register</v-btn>
                 <v-btn color="primary" @click="login" :disabled="nullCheck">Login</v-btn>
               </v-card-actions>
             </v-card>
@@ -53,6 +54,10 @@
         }
     },
     methods: {
+      register(){
+            window.location.href = "/signup"
+      },
+
       login() {
         var self = this
         fetch('http://localhost:3000/api/auth/login',{
