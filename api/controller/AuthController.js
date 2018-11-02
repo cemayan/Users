@@ -1,11 +1,13 @@
 var express = require('express');
 var router = express.Router();
+var app = express();
 var bodyParser = require('body-parser');
 var jwt = require('jsonwebtoken');
 var bcrypt = require('bcryptjs');
 var config = require('../config');
 
 var User_ = require("../model/user");
+
 
 
 router.post('/register', function(req, res) {
