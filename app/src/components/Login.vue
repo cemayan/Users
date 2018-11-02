@@ -22,7 +22,7 @@
                     Please try again.
                  </v-alert>
                 <v-spacer></v-spacer>
-                <v-btn color="primary" @click="register">Register</v-btn>
+                <v-btn  @click="register">Register</v-btn>
                 <v-btn color="primary" @click="login" :disabled="nullCheck">Login</v-btn>
               </v-card-actions>
             </v-card>

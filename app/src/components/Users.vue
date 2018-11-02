@@ -14,16 +14,16 @@
           <v-card-text>
             <v-container grid-list-md>
               <v-layout wrap>
-                <v-flex xs12 sm6 md4>
+                <v-flex xs12 sm6 >
                   <v-text-field v-model="currentUser.name" label="Name"></v-text-field>
                 </v-flex>
-                <v-flex xs12 sm6 md4>
+                <v-flex xs12 sm6 >
                   <v-text-field v-model="currentUser.surname" label="Surname"></v-text-field>
                 </v-flex>
-                <v-flex xs12 sm6 md4>
+                <v-flex xs12 sm6 >
                   <v-text-field v-model="currentUser.username" label="Username"></v-text-field>
                 </v-flex>
-                   <v-flex xs12 sm6 md4>
+                   <v-flex xs12 sm6 >
                   <v-text-field v-model="currentUser.password" label="Password"></v-text-field>
                 </v-flex>
               </v-layout>
